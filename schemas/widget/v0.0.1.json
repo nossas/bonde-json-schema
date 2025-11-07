@@ -1,0 +1,26 @@
+{
+    "$id": "/schemas/widget/v0.0.1.json",
+    "$schema": "http://json-schema.org/draft-2020-12/schema#",
+    "type": "object",
+    "title": "Configurações de Widget",
+    "description": "Estrutura básica para uma Widget",
+    "allOf": [
+        {
+            "title": "UI",
+            "description": "Atributos utilizados na renderização do formulário",
+            "properties": {
+                "call_to_action": {"type": "string"},
+                "title_text": {"type": "string"},
+                "button_text": {"type": "string"},
+                "main_color": {"type": "string"},
+                "finish_message_type": {"type": "string"},
+                "finish_message_background": {"type": "string"},
+                "finish_message": {"type": "string"},
+                "finish_message_html_text": {"type": "string"},
+                "count_text": {"type": "string"},
+                "show_counter": {"type": "string"}
+            }
+        },
+        {"$ref": "/schemas/autofire/v0.0.1.json"}
+    ]
+}

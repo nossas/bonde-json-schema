@@ -1,0 +1,26 @@
+{
+    "$id": "/schemas/phone/v0.0.1.json",
+    "$schema": "http://json-schema.org/draft-2020-12/schema#",
+    "type": "object",
+    "title": "Pressão por Telefone",
+    "allOf": [
+        {
+            "$ref": "/schemas/widget/v0.0.1.json"
+        },
+        {
+            "title": "Campos extras",
+            "description": "Configurações extras para tipo de Widget Pressão por Telefone",
+            "properties": {
+                "targets": {
+                    "type": "array"
+                },
+                "briefing": {
+                    "type": "string"
+                },
+                "call_script": {
+                    "type": "string"
+                }
+            }
+        }
+    ]
+}

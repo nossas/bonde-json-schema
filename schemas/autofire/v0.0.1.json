@@ -1,0 +1,27 @@
+{
+    "$id": "/schemas/autofire/v0.0.1.json",
+    "$schema": "http://json-schema.org/draft-2020-12/schema#",
+    "type": "object",
+    "title": "Autofire",
+    "description": "Atributos para configuração do autofire de e-mail",
+    "properties": {
+        "email_text": {
+            "type": "string"
+        },
+        "sender_email": {
+            "type": "string"
+        },
+        "email_subject": {
+            "type": "string"
+        },
+        "sender_name": {
+            "type": "string"
+        },
+        "whatsapp_text": {
+            "type": "string"
+        },
+        "reply_email": {
+            "type": "string"
+        }
+    }
+}

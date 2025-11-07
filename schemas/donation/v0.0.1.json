@@ -1,0 +1,48 @@
+{
+    "$id": "/schemas/donation/v0.0.1.json",
+    "$schema": "http://json-schema.org/draft-2020-12/schema#",
+    "type": "object",
+    "title": "Doação",
+    "allOf": [
+        {"$ref": "/schemas/widget/v0.0.1.json"},
+        {
+            "title": "Campos extras",
+            "description": "Configurações extras para tipo de Widget Doação",
+            "properties": {
+                "donation_value1": {
+                    "type": ["string", "null"]
+                },
+                "payment_type": {
+                    "type": "string"
+                },
+                "payment_methods": {
+                    "type": "string"
+                },
+                "default_donation_value": {
+                    "type": ["string", "number"]
+                },
+                "donation_value2": {
+                    "type": ["string", "null"]
+                },
+                "donation_value3": {
+                    "type": ["string", "null"]
+                },
+                "donation_value4": {
+                    "type": ["string", "null"]
+                },
+                "recurring_period": {
+                    "type": ["string", "number"]
+                },
+                "donation_value5": {
+                    "type": ["string", "null"]
+                },
+                "goal_date_limit": {
+                    "type": "string"
+                },
+                "customer_data": {
+                    "type": "string"
+                }
+            }
+        }
+    ]
+}

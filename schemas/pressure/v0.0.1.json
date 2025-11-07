@@ -1,0 +1,56 @@
+{
+    "$id": "/schemas/pressure/v0.0.1.json",
+    "$schema": "http://json-schema.org/draft-2020-12/schema#",
+    "type": "object",
+    "title": "Pressão por E-mail",
+    "allOf": [
+        {
+            "$ref": "/schemas/widget/v0.0.1.json"
+        },
+        {
+            "title": "Campos extras",
+            "description": "Configurações extras para tipo de Widget Pressão por e-mail",
+            "properties": {
+                "pressure_body": {
+                    "type": "string"
+                },
+                "pressure_subject": {
+                    "type": "string"
+                },
+                "disable_edit_field": {
+                    "type": "string"
+                },
+                "pressure_type": {
+                    "type": "string"
+                },
+                "is_subject_list": {
+                    "type": "string"
+                },
+                "targets": {
+                    "type": [
+                        "array",
+                        "string"
+                    ]
+                },
+                "optimization_enabled": {
+                    "type": ["boolean", "string"]
+                },
+                "mail_limit": {
+                    "type": ["string", "number"]
+                },
+                "subject_list": {
+                    "type": "array"
+                },
+                "batch_limit": {
+                    "type": ["string", "number"]
+                },
+                "select_label": {
+                    "type": "string"
+                },
+                "optimization_disabled": {
+                    "type": "boolean"
+                }
+            }
+        }
+    ]
+}

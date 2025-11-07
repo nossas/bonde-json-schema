@@ -1,0 +1,19 @@
+{
+    "$id": "/schemas/form/v0.0.1.json",
+    "$schema": "http://json-schema.org/draft-2020-12/schema#",
+    "type": "object",
+    "title": "Formulário",
+    "allOf": [
+        {"$ref": "/schemas/widget/v0.0.1.json"},
+        {
+            "title": "Campos extras",
+            "description": "Configurações extras para tipo de Widget Formulário",
+            "properties": {
+                "fields": {
+                    "type": "string"
+                }
+            },
+            "required": ["fields"]
+        }
+    ]
+}

@@ -1,0 +1,183 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JSON Schema Documentation</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+            }
+            
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 2rem;
+            }
+            
+            .header {
+                text-align: center;
+                margin-bottom: 3rem;
+                color: white;
+            }
+            
+            .header h1 {
+                font-size: 3rem;
+                margin-bottom: 0.5rem;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+            
+            .header p {
+                font-size: 1.2rem;
+                opacity: 0.9;
+            }
+            
+            .schemas-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+            
+            .schema-card {
+                background: white;
+                border-radius: 12px;
+                padding: 1.5rem;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border: 1px solid #e1e5e9;
+            }
+            
+            .schema-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            }
+            
+            .schema-card h3 {
+                color: #2c3e50;
+                margin-bottom: 0.5rem;
+                font-size: 1.3rem;
+            }
+            
+            .schema-card p {
+                color: #7f8c8d;
+                margin-bottom: 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .btn {
+                display: inline-block;
+                background: #3498db;
+                color: white;
+                padding: 0.7rem 1.5rem;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 500;
+                transition: background 0.3s ease;
+            }
+            
+            .btn:hover {
+                background: #2980b9;
+            }
+            
+            .footer {
+                text-align: center;
+                margin-top: 3rem;
+                color: white;
+                opacity: 0.8;
+            }
+            
+            @media (max-width: 768px) {
+                .schemas-grid {
+                    grid-template-columns: 1fr;
+                }
+                
+                .header h1 {
+                    font-size: 2rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>📚 Schema Documentation</h1>
+                <p>Documentação completa dos JSON Schemas disponíveis</p>
+            </div>
+            
+            <div class="schemas-grid">
+    
+                <div class="schema-card">
+                    <h3>donation</h3>
+                    <p>Documentação detalhada do schema donation</p>
+                    <a href="donation.html" class="btn">Ver Documentação</a>
+                </div>
+    
+                <div class="schema-card">
+                    <h3>form</h3>
+                    <p>Documentação detalhada do schema form</p>
+                    <a href="form.html" class="btn">Ver Documentação</a>
+                </div>
+    
+                <div class="schema-card">
+                    <h3>widget</h3>
+                    <p>Documentação detalhada do schema widget</p>
+                    <a href="widget.html" class="btn">Ver Documentação</a>
+                </div>
+    
+                <div class="schema-card">
+                    <h3>pressure</h3>
+                    <p>Documentação detalhada do schema pressure</p>
+                    <a href="pressure.html" class="btn">Ver Documentação</a>
+                </div>
+    
+                <div class="schema-card">
+                    <h3>phone</h3>
+                    <p>Documentação detalhada do schema phone</p>
+                    <a href="phone.html" class="btn">Ver Documentação</a>
+                </div>
+    
+                <div class="schema-card">
+                    <h3>autofire</h3>
+                    <p>Documentação detalhada do schema autofire</p>
+                    <a href="autofire.html" class="btn">Ver Documentação</a>
+                </div>
+    
+            </div>
+            
+            <div class="footer">
+                <p>Gerado automaticamente • Atualizado em <span id="current-date"></span></p>
+            </div>
+        </div>
+        
+        <script>
+            // Atualiza a data atual
+            document.getElementById('current-date').textContent = new Date().toLocaleDateString('pt-BR');
+            
+            // Adiciona efeitos de hover
+            document.addEventListener('DOMContentLoaded', function() {
+                const cards = document.querySelectorAll('.schema-card');
+                cards.forEach(card => {
+                    card.addEventListener('mouseenter', function() {
+                        this.style.transform = 'translateY(-5px)';
+                    });
+                    card.addEventListener('mouseleave', function() {
+                        this.style.transform = 'translateY(0)';
+                    });
+                });
+            });
+        </script>
+    </body>
+    </html>
+    

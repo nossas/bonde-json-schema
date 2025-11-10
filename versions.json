@@ -1,0 +1,36 @@
+{
+  "projectVersion": "1.0.0",
+  "generated": "2025-11-10T09:23:26.361813",
+  "schemas": [
+    {
+      "name": "donation",
+      "version": "v0.0.1",
+      "documentationUrl": "donation.html"
+    },
+    {
+      "name": "form",
+      "version": "v0.0.1",
+      "documentationUrl": "form.html"
+    },
+    {
+      "name": "widget",
+      "version": "v0.0.1",
+      "documentationUrl": "widget.html"
+    },
+    {
+      "name": "pressure",
+      "version": "v0.0.1",
+      "documentationUrl": "pressure.html"
+    },
+    {
+      "name": "phone",
+      "version": "v0.0.1",
+      "documentationUrl": "phone.html"
+    },
+    {
+      "name": "autofire",
+      "version": "v0.0.1",
+      "documentationUrl": "autofire.html"
+    }
+  ]
+}

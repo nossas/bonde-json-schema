@@ -4,8 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>JSON Schema Documentation</title>
+        <title>JSON Schema Documentation - v1.0.0</title>
+        <link rel="stylesheet" href="custom.css">
         <style>
+            /* Seus estilos existentes aqui */
             * {
                 margin: 0;
                 padding: 0;
@@ -24,6 +26,31 @@
                 max-width: 1200px;
                 margin: 0 auto;
                 padding: 2rem;
+            }
+            
+            .version-header {
+                background: rgba(255,255,255,0.1);
+                backdrop-filter: blur(10px);
+                padding: 1rem;
+                border-radius: 10px;
+                margin-bottom: 2rem;
+                color: white;
+                text-align: center;
+            }
+            
+            .version-badges {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 0.5rem;
+                flex-wrap: wrap;
+            }
+            
+            .version-badge {
+                background: rgba(255,255,255,0.2);
+                padding: 0.3rem 0.8rem;
+                border-radius: 20px;
+                font-size: 0.8em;
             }
             
             .header {
@@ -57,6 +84,7 @@
                 box-shadow: 0 8px 25px rgba(0,0,0,0.1);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
                 border: 1px solid #e1e5e9;
+                position: relative;
             }
             
             .schema-card:hover {
@@ -64,10 +92,23 @@
                 box-shadow: 0 15px 35px rgba(0,0,0,0.15);
             }
             
+            .schema-version {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: #3498db;
+                color: white;
+                padding: 0.2rem 0.6rem;
+                border-radius: 4px;
+                font-size: 0.7em;
+                font-weight: bold;
+            }
+            
             .schema-card h3 {
                 color: #2c3e50;
                 margin-bottom: 0.5rem;
                 font-size: 1.3rem;
+                padding-right: 60px;
             }
             
             .schema-card p {
@@ -111,44 +152,54 @@
     </head>
     <body>
         <div class="container">
-            <div class="header">
-                <h1>📚 Schema Documentation</h1>
-                <p>Documentação completa dos JSON Schemas disponíveis</p>
+            <div class="version-header">
+                <h2>📚 Schema Documentation</h2>
+                <p>Documentação completa dos JSON Schemas</p>
+                <div class="version-badges">
+                    <span class="version-badge">Projeto: v1.0.0</span>
+                    <span class="version-badge">Gerado: 10/11/2025 09:23</span>
+                </div>
             </div>
             
             <div class="schemas-grid">
     
                 <div class="schema-card">
+                    <span class="schema-version">v0.0.1</span>
                     <h3>donation</h3>
                     <p>Documentação detalhada do schema donation</p>
                     <a href="donation.html" class="btn">Ver Documentação</a>
                 </div>
     
                 <div class="schema-card">
+                    <span class="schema-version">v0.0.1</span>
                     <h3>form</h3>
                     <p>Documentação detalhada do schema form</p>
                     <a href="form.html" class="btn">Ver Documentação</a>
                 </div>
     
                 <div class="schema-card">
+                    <span class="schema-version">v0.0.1</span>
                     <h3>widget</h3>
                     <p>Documentação detalhada do schema widget</p>
                     <a href="widget.html" class="btn">Ver Documentação</a>
                 </div>
     
                 <div class="schema-card">
+                    <span class="schema-version">v0.0.1</span>
                     <h3>pressure</h3>
                     <p>Documentação detalhada do schema pressure</p>
                     <a href="pressure.html" class="btn">Ver Documentação</a>
                 </div>
     
                 <div class="schema-card">
+                    <span class="schema-version">v0.0.1</span>
                     <h3>phone</h3>
                     <p>Documentação detalhada do schema phone</p>
                     <a href="phone.html" class="btn">Ver Documentação</a>
                 </div>
     
                 <div class="schema-card">
+                    <span class="schema-version">v0.0.1</span>
                     <h3>autofire</h3>
                     <p>Documentação detalhada do schema autofire</p>
                     <a href="autofire.html" class="btn">Ver Documentação</a>
@@ -157,15 +208,14 @@
             </div>
             
             <div class="footer">
-                <p>Gerado automaticamente • Atualizado em <span id="current-date"></span></p>
+                <p>Gerado automaticamente • <a href="versions.json" style="color: white;">Ver todas versões</a></p>
             </div>
         </div>
         
+        <script src="custom.js"></script>
         <script>
-            // Atualiza a data atual
             document.getElementById('current-date').textContent = new Date().toLocaleDateString('pt-BR');
             
-            // Adiciona efeitos de hover
             document.addEventListener('DOMContentLoaded', function() {
                 const cards = document.querySelectorAll('.schema-card');
                 cards.forEach(card => {

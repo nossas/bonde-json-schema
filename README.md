@@ -1,3 +1,19 @@
+# BONDE JSON SCHEMA
+
+## Gerar documentação
+
+Execute o comando para buildar os arquivos
+
+```sh
+uv run python build_docs.py
+```
+
+Faça `commit` e depois `push` dos arquivos atualizados da documentação e depois execute o comando para publicar na branch `gh-pages`
+
+```sh
+git subtree push --prefix build/docs origin gh-pages
+```
+
 ## Agrupar Widgets por Chaves no settings JSONB
 
 ```sql
